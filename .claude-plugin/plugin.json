@@ -1,0 +1,18 @@
+{
+  "name": "just-enough",
+  "description": "The best code is the code you never wrote — a general-purpose restraint discipline. Walks a reuse ladder (necessity → reuse what's here → standard library → existing dependency → minimal code) before writing anything, marks deliberate simplifications with their upgrade path, and stops at the minimal READABLE solution, never a golfed one-liner. De-golfed ponytail.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Lance Gui",
+    "email": "lance.guixiaofan@gmail.com"
+  },
+  "keywords": [
+    "code-quality",
+    "minimalism",
+    "yagni",
+    "readability",
+    "refactoring",
+    "simplicity"
+  ],
+  "license": "MIT"
+}
