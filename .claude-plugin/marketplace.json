@@ -1,0 +1,20 @@
+{
+  "name": "just-enough",
+  "description": "just-enough — a general-purpose code-restraint discipline for AI coding agents (de-golfed ponytail).",
+  "owner": {
+    "name": "Lance Gui",
+    "email": "lance.guixiaofan@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "just-enough",
+      "description": "The best code is the code you never wrote — walks a reuse ladder (necessity → reuse what's here → standard library → existing dependency → minimal code) before writing anything, marks deliberate simplifications with their upgrade path, and stops at the minimal READABLE solution, never a golfed one-liner.",
+      "version": "0.1.0",
+      "source": "./",
+      "author": {
+        "name": "Lance Gui",
+        "email": "lance.guixiaofan@gmail.com"
+      }
+    }
+  ]
+}
