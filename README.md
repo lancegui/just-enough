@@ -2,17 +2,19 @@
 
 > The best code is the code you never wrote — and the second best is the code anyone can read.
 
-A general-purpose **code-restraint discipline** for AI coding agents. Before writing anything, it walks a **reuse ladder** — *does this need to exist? → reuse what's already here → standard library → a native feature → an existing dependency → minimal code* — and stops at the first rung that works. Then it stops at the minimal **readable** solution: named steps a teammate can follow in one pass, **never a golfed one-liner**.
+A general-purpose **code-restraint discipline** for AI coding agents. Before writing anything, it walks a **reuse ladder** — *does this need to exist? → reuse what's already here → language/runtime primitive or stdlib → a native feature → an installed or project-standard ecosystem package → minimal code* — and stops at the first rung that works. Then it stops at the minimal **readable** solution: keep the punchy one-liner when it says one plain thing, and split only when compression hides decisions.
 
-De-golfed [ponytail](https://github.com/DietrichGebert/ponytail): it keeps ponytail's "should this code exist?" ladder but drops the fewest-lines goal in favour of readability.
+[ponytail](https://github.com/DietrichGebert/ponytail) with taste: it keeps ponytail's "should this code exist?" ladder and one-line punch, but drops line-count golf in favour of code that still reads cleanly.
 
 ## What it does
 
-- **Walks the reuse ladder** so you reach for the standard library or an existing helper before hand-rolling logic or adding a dependency.
-- **Stops at minimal *readable* code, not the shortest.** One conceptual step per line — no clever one-liner that folds a fetch, a filter, and a transform into a single unreviewable line.
+- **Walks the reuse ladder** so you reach for language/runtime primitives, native features, existing helpers, or project-standard packages before hand-rolling logic or adding a dependency.
+- **Stops at minimal *readable* code, not maximal expansion.** One plain idea can be one line; no clever line should fold a fetch, a filter, and a transform into a single unreviewable step.
+- **Treats stdlib as a boring-primitive preference, not package purity.** In Python/R/Julia-style ecosystems, the idiomatic package already used by the project can be the leanest answer.
+- **Leaves one tiny check for non-trivial logic.** Trivial one-liners need none; bug fixes, branchy behavior, parsers, and risky paths get the smallest runnable proof.
 - **Marks deliberate simplifications** with `# lean: <simplification> — upgrade when <Y>`, so a shortcut is a documented trade-off with an upgrade path, not a silent one.
 
-It is intentionally general — any language, any project. For econ/research code, pair it with **`analysis-craft`** (in [causal-powers](https://github.com/lancegui/causal-powers)), which specialises the readability standard for that domain: economic-unit variable names, `# why:` decision comments, and the "can a referee follow it in one pass?" test. `just-enough` says *should this exist + don't reinvent + don't golf*; `analysis-craft` adds the econ-specific readability layer on top.
+It is intentionally general — any language, any project. For econ/research code, pair it with **`analysis-craft`** (in [causal-powers](https://github.com/lancegui/causal-powers)), which specialises the readability standard for that domain: economic-unit variable names, `# why:` decision comments, and the "can a referee follow it in one pass?" test. `just-enough` says *should this exist + don't reinvent + don't golf or pad*; `analysis-craft` adds the econ-specific readability layer on top.
 
 ## Install
 

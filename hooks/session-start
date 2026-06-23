@@ -6,7 +6,7 @@ set -uo pipefail
 case ",${JUST_ENOUGH_DISABLED_HOOKS:-}," in *",session-start,"*) exit 0 ;; esac
 
 card="<system-reminder>
-just-enough is active. When writing or editing ANY code, before adding a function, file, dependency, or abstraction, invoke the just-enough skill via the Skill tool and walk the reuse ladder: does this need to exist? → reuse what's already here → standard library → native feature → existing dependency → minimal code. Stop at the first rung that works, and write the result so a teammate reads it in one pass — minimal and READABLE, never a golfed one-liner. The best code is the code you never wrote.
+just-enough is active. When writing or editing ANY code, before adding a function, file, dependency, or abstraction, invoke the just-enough skill via the Skill tool and walk the reuse ladder: does this need to exist? → reuse what's already here → language/runtime primitive or stdlib → native feature → installed or project-standard ecosystem package → minimal code. Stdlib is a boring-primitive preference, not package purity. Stop at the first rung that works, and write the result in its shortest obvious shape: keep a clear one-liner, split only when compression hides decisions. Non-trivial logic leaves the smallest runnable check; trivial one-liners need none. The best code is the code you never wrote.
 </system-reminder>"
 
 escape_for_json() {

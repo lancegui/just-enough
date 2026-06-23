@@ -1,6 +1,6 @@
 {
   "name": "just-enough",
-  "description": "just-enough — a general-purpose code-restraint discipline for AI coding agents (de-golfed ponytail).",
+  "description": "just-enough — a general-purpose code-restraint discipline for AI coding agents (ponytail with taste).",
   "owner": {
     "name": "Lance Gui",
     "email": "lance.guixiaofan@gmail.com"
@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "just-enough",
-      "description": "The best code is the code you never wrote — walks a reuse ladder (necessity → reuse what's here → standard library → existing dependency → minimal code) before writing anything, marks deliberate simplifications with their upgrade path, and stops at the minimal READABLE solution, never a golfed one-liner.",
+      "description": "The best code is the code you never wrote — walks a reuse ladder (necessity → reuse what's here → stdlib/runtime primitive → native feature → installed or project-standard package → minimal code) before writing anything, marks deliberate simplifications with their upgrade path, leaves one tiny check for non-trivial logic, and stops at the shortest obvious solution: keep a clear one-liner, split hidden decisions.",
       "version": "0.1.0",
       "source": "./",
       "author": {
